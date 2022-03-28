@@ -1,0 +1,67 @@
+<mvc:View xmlns:mvc="sap.ui.core.mvc" xmlns:core="sap.ui.core" xmlns="sap.m" xmlns:smartFilterBar="sap.ui.comp.smartfilterbar" xmlns:smartTable="sap.ui.comp.smarttable" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:app="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1" controllerName="com.prod.set.smarttablesapodataservices.controller.View1" displayBlock="true">
+    <Shell id="shell">
+        <App id="app">
+            <pages>
+                <Page id="page" title="SAP Products">
+                    <content>
+                    
+<smartTable:SmartTable id="prodsmarttable" entitySet="ProductSet" enableAutoBinding="true" initiallyVisibleFields="ProductID,TypeCode,Category,NameLanguage,Description" 
+ignoreFromPersonalisation="DescriptionLanguage,SupplierIDSupplierName,TaxTarifCode,MeasureUnit,WeightMeasure,WeightUnit,CurrencyCode,Price,Width,Depth,Height,DimUnit,CreatedAt,ChangedAt" editTogglable="true" app:useSmartToggle="true">
+ 	<smartTable:customToolbar>
+			<OverflowToolbar design="Transparent">
+				<ToolbarSpacer/>
+				
+				<OverflowToolbarButton tooltip="Sort" press="onTableRowDelete" icon="sap-icon://delete"/>
+				
+			<content>
+			    <Button xmlns="sap.m" text="Split Line" id="button7"/>
+			</content>
+			</OverflowToolbar>
+		</smartTable:customToolbar>
+                <Table id="_IDGenTable1" growing="true" growingScrollToLoad="false" growingThreshold="20" mode="MultiSelect" 
+                selectionChange="onSelectionChange" updateFinished="onTableUpdateFinished" updateStarted="_onUpdateStarted"    >
+                <columns>
+                        <Column>
+                            <customData>
+                                <core:CustomData key="p13nData" value="\{                                 
+                                    &quot;columnKey&quot;         : &quot;Name&quot;,                                                                
+                                    &quot;columnIndex&quot;       : 4,                                  
+                                    &quot;leadingProperty&quot;   : &quot;Name&quot;,                                  
+                                    &quot;sortProperty&quot;      : &quot;Name&quot;,                                                                
+                                    &quot;displayBehaviour&quot;  : &quot;descriptionOnly&quot;,                                  
+                                    &quot;width&quot;             : &quot;360px&quot;                             
+                                    }"/>
+                            </customData>
+                        <Text text="Name"/>
+                        </Column>
+                <Column width="50px">
+                    <customData>
+                                <core:CustomData key="p13nData" value="\{                                 
+                                    &quot;columnKey&quot;         : &quot;Description&quot;,                                                                
+                                    &quot;columnIndex&quot;       : 30                                  
+                                                   
+                                    }"/>
+					</customData>
+                     <Text />
+                </Column>
+                </columns>
+                <items>
+                <ColumnListItem type="Navigation" press="_gotoDetailView">
+                <cells>
+                <Text text="{Name}"/>
+                </cells>
+                <cells>
+                    <Button icon="sap-icon://delete" press="onTableRowDelete" type="Reject"/>
+                </cells>
+                </ColumnListItem>
+                </items>
+                </Table>
+                                
+			
+			</smartTable:SmartTable>
+                    </content>
+                </Page>
+            </pages>
+        </App>
+    </Shell>
+</mvc:View>

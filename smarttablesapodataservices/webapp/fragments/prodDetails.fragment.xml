@@ -1,0 +1,88 @@
+<core:FragmentDefinition
+   xmlns="sap.m"
+   xmlns:core="sap.ui.core" 	xmlns:l="sap.ui.layout"
+	xmlns:f="sap.ui.layout.form">
+   <Dialog
+      id="helloDialog" draggable="true" resizable="true"
+      title="Product Details">
+      	<f:SimpleForm id="SimpleFormChange354"
+		layout="ResponsiveGridLayout"
+			columnsXL="3"
+			columnsL="3"
+			columnsM="3"
+			>
+			<f:content>
+            	<core:Title text="" />
+				<Label text="ProductID" />
+				<Text text="{prod>/ProductID}" />
+
+                	<Label text="TypeCode" />
+				<Text text="{prod>/TypeCode}" />
+
+                	<Label text="Category" />
+				<Text text="{prod>/Category}" />
+
+                	<Label text="Name" />
+				<Text text="{prod>/Name}" />
+
+                	<Label text="NameLanguage" />
+				<Text text="{prod>/NameLanguage}" />
+
+                	<Label text="Description" />
+				<Text text="{prod>/Description}" />
+
+                	<Label text="DescriptionLanguage" />
+				<Text text="{prod>/DescriptionLanguage}" />
+
+<core:Title text="" />
+                	<Label text="SupplierID" />
+				<Text text="{prod>/SupplierID}" />
+
+                	<Label text="SupplierName" />
+				<Text text="{prod>/SupplierName}" />
+
+                	<Label text="TaxTarifCode" />
+				<Text text="{prod>/TaxTarifCode}" />
+
+                	<Label text="MeasureUnit" />
+				<Text text="{prod>/MeasureUnit}" />
+
+                	<Label text="WeightMeasure" />
+				<Text text="{prod>/WeightMeasure}" />
+
+                	<Label text="WeightUnit" />
+				<Text text="{prod>/WeightUnit}" />
+
+                	<Label text="CurrencyCode" />
+				<Text text="{prod>/CurrencyCode}" />
+
+<core:Title text="" />
+                	<Label text="Price" />
+				<Text text="{prod>/Price}" />
+                
+                	<Label text="Width" />
+				<Text text="{prod>/Width}" />
+
+                	<Label text="Depth" />
+				<Text text="{prod>/Depth}" />
+
+                	<Label text="Height" />
+				<Text text="{prod>/Height}" />
+
+                	<Label text="DimUnit" />
+				<Text text="{prod>/DimUnit}" />
+
+                	<Label text="CreatedAt" />
+				<Text text="{prod>/CreatedAt}" />
+
+                	<Label text="ChangedAt" />
+				<Text text="{prod>/ChangedAt}" />
+
+			
+			</f:content>
+		</f:SimpleForm>
+        <buttons>
+        <Button text="Close" press="_close" />
+        </buttons>
+   </Dialog>
+</core:FragmentDefinition>
