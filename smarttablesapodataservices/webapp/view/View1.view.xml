@@ -32,7 +32,7 @@ ignoreFromPersonalisation="DescriptionLanguage,SupplierIDSupplierName,TaxTarifCo
                                     &quot;width&quot;             : &quot;360px&quot;                             
                                     }"/>
                             </customData>
-                        <Text text="Name"/>
+                        <Text text="Product Name"/>
                         </Column>
                 <Column width="50px">
                     <customData>
